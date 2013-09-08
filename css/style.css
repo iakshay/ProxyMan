@@ -1,0 +1,28 @@
+body {
+  font: 300 16px/1.5 'Helvetica', Arial, sans-serif;
+  color: #404040;
+}
+
+.container{
+    max-width: 960px;
+    background: rgba(255,255,255, 0.8);
+    padding:20px;
+}
+.container select{
+    margin:10px 0;
+    max-width:408px;
+}
+.radio{
+    margin-bottom:18px
+}
+.proxy-options{
+    margin: 20px;
+}
+.form-group{
+    margin:10px 0;
+}
+
+.form-group .col-lg-7, .form-group .col-lg-2{
+    padding-right 5px;
+    padding-left:0;
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Managing Proxy for pages blocked in BITS.",
+  "version": "0.1",
+  "permissions": [
+    "proxy",
+    "tabs", "http://*/*", "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*","https://*/*"],
+      "css": ["css/hide.css"],
+      "run_at": "document_start",
+      "all_frames": true
+    },
+    {
+      "matches": ["http://*/*","https://*/*"],
+      "js": ["js/detect.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ]
+  },
+  "options_page": "options.html",
+  "manifest_version": 2
+}

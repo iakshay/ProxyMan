@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Options Page</title>
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css" media="all">
+    <link rel="stylesheet" href="css/style.css" media="all">
+</head>
+<body>
+    <div class="container">
+    <div class="page-header">
+          <h1>BITS ProxyMan <small>Options</small></h1>
+    </div>
+    <nav>
+        <ul class="nav nav-tabs">
+            <li data-tab="settings" class="active"><a href="#">Settings</a></li>
+            <li data-tab="sites-blocked"><a href="#">Sites Blocked</a></li>
+            <li data-tab="faqs"><a href="#">FAQs</a></li>
+            <li data-tab="about"><a href="#">About</a></li>
+        </ul>
+        </nav>
+    <section class="settings">
+    <form role="form">
+        <div style="display:none" class="alert alert-success">Your options have been saved succesfully</div>
+        <div style="display:none" class="alert alert-danger"><strong>Oh Snap! </strong> Look at the errors below </div>
+        <div class="radio">
+            <label for="system_proxy">
+                <input type="radio" name="proxy" id="system_proxy" value="system_proxy" />
+                Use System Proxy
+            </label>
+        </div>
+        <div class="radio">
+            <label for="custom_proxy">
+                <input type="radio" name="proxy" id="custom_proxy" value="custom_proxy" />
+                Use custom Proxy for sites that are blocked
+            </label>
+        </div>
+        <section class="proxy-options">
+            <select name="proxy_type" id="proxy_type" class="form-control">
+                <option value="PROXY">HTTP</option>
+                <!-- <option value="https">HTTPS</option> -->
+                <option value="SOCKS5">SOCKS</option>
+                <option value="redirect">Proxy Server Redirect</option>
+            </select>
+            <h4> SOCKS Proxy Server </h4>
+            <div class="form-group row">
+                <div class="col-lg-7">
+                    <input type="text" id="hostname" class="form-control" name="hostname" placeholder="Proxy Server">
+                </div>    
+                <div class="col-lg-2">
+                    <input type="text" id="port" class="form-control" name="port" placeholder="Port">
+                </div>
+            </div>
+        </section>
+        <input type="submit" name="save" class="btn btn-primary" id="save" value="Save Settings">
+        <input type="submit" name="reset" class="btn btn-danger" id="reset" value="Reset Settings">
+    </form>
+    </section>
+    <section style="display:none" class="sites-blocked">
+        <p>Sites blocked here</p>
+        <textarea id="sites_list"></textarea>
+    </section>
+    <section style="display:none" class="faqs">
+        Few questions here
+    </section>
+    <section style="display:none" class="about">
+        Designed and Developed by Akshay Aurora
+    </section>
+    </div>
+    <script src="js/vendor/jquery-2.0.3.min.js"></script>
+    <script src="js/options.js"></script>
+</body>
+</html>

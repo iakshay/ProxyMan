@@ -1,8 +1,8 @@
 #ProxyMan
-Chrome extension to bypass BITS Firewall restrictions
+Chrome extension to bypass Firewall restrictions
 
 #TODO
 
 - Unit Tests
-    -   Check if website blocked page is redirect
+- Check website blocked page via regex
 

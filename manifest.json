@@ -1,5 +1,5 @@
 {
-  "name": "Managing Proxy for pages blocked in BITS.",
+ "name": "Managing Proxy for pages blocked in BITS.",
   "version": "0.1",
   "permissions": [
     "proxy",
@@ -20,9 +20,8 @@
     }
   ],
   "background": {
-    "scripts": [
-      "js/background.js"
-    ]
+    "scripts": ["js/background.js"],
+    "persistent": false
   },
   "options_page": "options.html",
   "manifest_version": 2
